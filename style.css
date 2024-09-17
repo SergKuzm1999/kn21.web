@@ -1,5 +1,6 @@
 body{
-    padding: 3% 5% 5% 5%;
+    
+    padding: 0px 10% 5% 10%;
     font-size:22px;
 }
 h1{
@@ -10,23 +11,67 @@ h1{
 
 ul{
     list-style-type: none;
-    text-align: center;
 }
 li{
-    width:340px;
-    display: table-cell;
-    padding-right: 250px;
+    position: relative;
+    padding: 0px;
+    margin:0px 10px 0px 10px;
+    height: 750px;
 }
-button{
-    font-size:22px;
-    padding:5px;
+li img{
+    width:100%;
+    min-height: 350px;
+}
+li p, li span{
+    font-size:20px;
+}
+li p{
+    padding: 0px;
+    margin: 0px;
+    
+}
+li h4{
+    height: 75px;
+    text-align: center;
+}
+li h4 a{
+    color:black;
+    text-decoration: none;
+}
+a{
+    color:black;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+a:hover{
+    color:purple;   
 }
 li button{
+    position:absolute;
+    bottom:25px;
     margin-top:15px;
     border-radius: 5px;
-    background-color: white;
+    border:1px solid #4c08bd;
+    background-color: #4c08bd;
+    color:white;
+    cursor: pointer;
+    font-size:15px;
+    padding:10px;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 li button:hover{
-    color:white;
-    background-color: black;
+   
+    background-color: rgb(172, 91, 172);
 }
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px;
+  }
