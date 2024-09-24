@@ -1,77 +1,125 @@
-body{
-    
+body {
+
     padding: 0px 10% 5% 10%;
-    font-size:22px;
+    font-size: 22px;
 }
-h1{
+
+h1 {
     margin-top: 75px;
     margin-bottom: 75px;
     text-align: center;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
-li{
+
+li {
     position: relative;
     padding: 0px;
-    margin:0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
     height: 750px;
 }
-li img{
-    width:100%;
+
+li img {
+    width: 100%;
     min-height: 350px;
 }
-li p, li span{
-    font-size:20px;
+
+li p,
+li span {
+    font-size: 20px;
 }
-li p{
+
+li p {
     padding: 0px;
     margin: 0px;
-    
+
 }
-li h4{
+
+li h4 {
     height: 75px;
     text-align: center;
 }
-li h4 a{
-    color:black;
+
+li h4 a {
+    color: black;
     text-decoration: none;
 }
-a{
-    color:black;
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
+
+a {
+    color: black;
+    -webkit-transition: all 0.3s ease;
+    ;
+    -moz-transition: all 0.3s ease;
+    ;
+    -o-transition: all 0.3s ease;
+    ;
     transition: all 0.3s ease;
 }
-a:hover{
-    color:purple;   
+
+a:hover {
+    color: purple;
 }
-li button{
-    position:absolute;
-    bottom:25px;
-    margin-top:15px;
+
+li button {
+    position: absolute;
+    bottom: 25px;
+    margin-top: 15px;
     border-radius: 5px;
-    border:1px solid #4c08bd;
+    border: 1px solid #4c08bd;
     background-color: #4c08bd;
-    color:white;
+    color: white;
     cursor: pointer;
-    font-size:15px;
-    padding:10px;
+    font-size: 15px;
+    padding: 10px;
     text-transform: uppercase;
 
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
+    -webkit-transition: all 0.3s ease;
+    ;
+    -moz-transition: all 0.3s ease;
+    ;
+    -o-transition: all 0.3s ease;
+    ;
     transition: all 0.3s ease;
 }
-li button:hover{
-   
+
+li button:hover {
+
     background-color: rgb(172, 91, 172);
 }
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 0px;
-  }
+}
+nav{
+    position: relative;
+    margin:50px 0 50px 0;
+    background: #4c08bd;
+    height: 50px;
+    padding:0px;
+    width:100%;
+    text-align: right;
+}
+.navbar .menu {
+    position: relative;
+    display:inline-block;
+    text-decoration: none;
+    padding:5px;
+    margin-left:50px;
+    margin-right:50px;
+}
+.menu .logo{
+    display: block;
+    font-size: 32px;
+    width:950px;
+    text-align: left !important;
+}
+.menu a{
+    font-size:22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+}
