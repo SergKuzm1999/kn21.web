@@ -4,6 +4,15 @@
 <head>
     <title>Мій сайт № 1</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function visible_form() {
+            var signin_form = document.getElementById('signin_form');
+            signin_form.classList.add('visible');
+            signin_form.classList.remove('hidden');
+        }
+    </script>
+
 </head>
 
 <body>
@@ -16,7 +25,7 @@
                 <a href='./signup_form.html'>Реєстрація</a>
             </div>
             <div class='menu'>
-                <a href='./signup_form.html'>Увійти</a>
+                <a href='#' onClick='visible_form()'>Увійти</a>
             </div>
         </nav>
     </div>
@@ -86,6 +95,21 @@
                 <div><button>Детальніше...</button></div>
             </li>
         </ul>
+        <div class="hidden" id="signin_form">
+            <div class="background-form"></div>
+            <form action="#" class="signin_form">
+                <h4>Увійти</h4>
+                <label for="username_sign_in">Логін</label>
+                <input type="text" name="username_sign_in" placeholder="Введіть логін" id="username_signin" />
+
+                <label for="password_signin">Пароль</label>
+                <input type="password" name="password_signin" placeholder="Введіть пароль" id="password_signin" />
+                <div>
+                    <button>Увійти</button>
+                    <button>Зареєструватися</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
