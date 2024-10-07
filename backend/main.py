@@ -1,26 +1,131 @@
+from datetime import date
+
 #Завдання № 1
-v_1 = 1
-v_2 = 1.23242424242424
-v_3 = "Hello World"
-v_4 = True
+a = 1
+b = 1.23242424242424
+c = "Hello World"
+d = True
 print()
 print("Завдання № 1. Оголошення змінних та типи даних.")
 print()
-print(v_1, type(v_1))
-print(v_2, type(v_2))
-print(v_3, type(v_3))
-print(v_4, type(v_4))
+print(a, type(a))
+print(b, type(b))
+print(c, type(c))
+print(d, type(d))
 print("")
 
 #завдання №2
-v_1 = 5
-v_2 = 12
+a = 5
+b = 12
 print()
 print("Завдання № 2. Операції з числами.")
 print()
-print("v_1 =", v_1, "v_2 =", v_2)
-print("+", v_1 + v_2)
-print("-", v_1 - v_2)
-print("/", v_1 / v_2)
-print("*", v_1 * v_2)
-print("v_1 в 2 степені", pow(v_1,2))
+print(F"a = {a} b = {b}")
+print("+", a + b)
+print("-", a - b)
+print("/", a / b)
+print("*", a * b)
+print(f"Абсолютне значення: abs({a}) = {abs(a)}")
+print(f"Модуль: {a} % {b} = {a % b}")
+print("A в 2 степені", pow(a,2))
+x, y, z = 10, 20, 30
+average = (x + y + z) / 3
+print(f"Середнє арифметичне: {average}")
+
+#завдання №3
+print()
+print("Завдання № 3. Робота з рядками.")
+print()
+name = "Сергій"  
+age = 25  
+print(f"Мене звати {name} і мені {age} років.")
+
+#завдання №4
+print()
+print("Завдання № 4. Умовні конструкції (if-elif-else).")
+print()
+number = int(input("Введіть число: "))
+if number % 2 == 0:
+    print(f"{number} - парне число.")
+else:
+    print(f"{number} - непарне число.")
+
+number = int(input("Введіть число для перевірки (від 10 до 50): "))
+if 10 <= number <= 50:
+    print(f"{number} входить в діапазон.")
+else:
+    print(f"{number} не входить в діапазон.")
+
+#завдання №5
+print()
+print("Завдання № 5. Цикли (for, while).")
+print()
+
+print("Числа від 1 до 10:")
+for i in range(1,11):
+    print(i)
+
+i = 0 
+sum = 0
+print()
+while i<101:
+    print(i)
+    sum += i
+    i+=1
+print(f"Сума чисел від 1до 100 : {sum}");
+
+#завдання №6
+print()
+print("Завдання № 6. Функції.")
+print()
+
+def sum_two_numbers(a, b):
+    return a + b
+
+def reverse_string(s):
+    return s[::-1]
+
+print(sum_two_numbers(10, 20))
+print(reverse_string("Hello World"))
+
+#завдання №7
+print()
+print("Завдання № 7. Списки та цикли.")
+print()
+
+str_list = ["test1","test2","test3","test4",'test5']
+for element in str_list:
+    print(element)
+print("Додано елемент до списку")
+str_list.append("test6")
+print(str_list)
+print("Видалено останній елемент в списку")
+str_list.pop()
+print(str_list)
+
+#завдання №8
+print()
+print("Завдання № 8. Робота з словниками.")
+print()
+student = {
+    "Name" : "Serhiy",
+    "Age" : 99,
+    "Faculty" : "Computer Science"
+}
+print(student["Name"])
+student["Year of study"] = date.today().strftime("%Y")
+print(student)
+
+#завдання №9
+print()
+print("Завдання № 9. Обробка виключень (try-except).")
+print()
+
+try:
+    a = int(input("Введіть число a: "))
+    b = int(input("Введіть число b: "))
+    print(f"a/b = {a/b}")
+except ZeroDivisionError:
+    print("Помилка: ділення на нуль неможливе.")
+except:
+    print("Виникла інша помилка.")
