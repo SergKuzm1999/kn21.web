@@ -72,7 +72,7 @@ while i<101:
     print(i)
     sum += i
     i+=1
-print(f"Сума чисел від 1до 100 : {sum}");
+print(f"Сума чисел від 1до 100 : {sum}")
 
 #завдання №6
 print()
