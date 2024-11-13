@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Увійти</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+
+    {% block content %}
+    <div>
+        <nav class='navbar'>
+            <div class='menu '>
+                <a class='logo' href='/'>IT коледж</a>
+            </div>
+            <div class='menu'>
+                <a href='/signup'>Реєстрація</a>
+            </div>
+            <div class='menu'>
+                <a href='/signin'>Увійти</a>
+            </div>
+        </nav>
+    </div>
+    <div class='signip'>
+        <h1>Увійти</h1>
+        <form method="POST" action="/signin" id="sign-in-form">
+            <div>
+                <label for='email'>Email</label>
+                <input name='email' placeholder='Введіть свій е-мейл'></input>
+            </div>
+            <div>
+                <label for='password'>Пароль</label>
+                <input type='password' name='password' placeholder='Введіть свій пароль'></input>
+            </div>
+            <div>
+                <button type='submit'>Увійти</button>
+            </div>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% endblock %}
+
+</body>
+
+</html>

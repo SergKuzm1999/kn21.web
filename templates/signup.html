@@ -8,51 +8,54 @@
 </head>
 
 <body>
+    {% block content %}
     <div>
         <nav class='navbar'>
             <div class='menu '>
-                <a class='logo' href='./index.html'>IT коледж</a>
+                <a class='logo' href='/'>IT коледж</a>
             </div>
             <div class='menu'>
-                <a href='./signup_form.html'>Реєстрація</a>
+                <a href='/signup'>Реєстрація</a>
             </div>
             <div class='menu'>
-                <a href='./signup_form.html'>Увійти</a>
+                <a href='/signin'>Увійти</a>
             </div>
         </nav>
     </div>
     <div class='signup'>
         <h1>Форма для реєстрації</h1>
-        <form action='#'>
-            <div>
-                <label for='name'>Ім'я</label>
-                <input name='name' placeholder="Введіть своє ім'я"></input>
-            </div>
-            <div>
-                <label for='surname'>Прізвище</label>
-                <input name='surname' placeholder="Введіть своє прізвище"></input>
-            </div>
-            <div>
-                <label for='phone'>Номер Телефону</label>
-                <input name='phone' placeholder='Введіть свій телефон'></input>
-            </div>
+        <form method="POST"action="/signup" id="sign-up-form">
             <div>
                 <label for='email'>Email</label>
                 <input name='email' placeholder='Введіть свій е-мейл'></input>
+            </div>
+            <div>
+                <label for='username'>Ім'я користувача</label>
+                <input name='username' placeholder="Введіть своє ім'я користувача"></input>
             </div>
             <div>
                 <label for='password'>Пароль</label>
                 <input type='password' name='password' placeholder='Введіть свій пароль'></input>
             </div>
             <div>
-                <label for='password_'>Підтвердіть пароль</label>
-                <input type='password' name='password_' placeholder='Підтвердіть пароль'></input>
+                <label for='phone'>Номер Телефону</label>
+                <input name='phone' placeholder='Введіть свій телефон'></input>
             </div>
             <div>
                 <button type='submit'>Зареєструватися</button>
             </div>
         </form>
     </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% endblock %}
 </body>
 
 </html>
